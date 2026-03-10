@@ -1,3 +1,5 @@
+=============================================================
+
 git is a software and github is a service to host git online
 github - collaboration + Backup + open source
 other hosts: gitlab , BitBucket
@@ -5,9 +7,13 @@ important commands:
 git config --global user.name "Vedansh"
 git config --global user.email "vedansh@gmail.com"
 
+==============================================================
+
 Setup SSH keys to connnect with github, github uses SSH to allow you to push code.
 Password based code push is not allowed.
 SSH- Secure Socket Shell
+
+==============================================================
 
 git remote -v if empty o/p => no remote configuration is Setup
 git remote add name url //connnect a remote repository
@@ -15,10 +21,44 @@ e.g. git remote add origin <url> //here origin is the name of the remote repo //
 git remote rename oldname newname //rename the repo
 git remote remove name
 
+==============================================================
+
 git push <remote> <branch> e.g. git push origin main
 git push -u origin main //linking origin with the main st whenever i push from main it links main to origin
 -u setup an upstream that allow you to run future command
 git push
 & it push code directly to github
+
+==============================================================
+
+git clone <url> //used to bring code from <url> to our system
+1. git clone
+
+Purpose:
+Used only once to copy a remote repository to your local machine.
+
+What it does:
+
+Downloads the entire repository from remote (e.g., GitHub).
+
+Creates a new local directory.
+
+Sets up the remote called origin.
+
+Checks out the default branch (usually main).
+
+When you clone a repo , you get just main branch connected,rest of remote branches are not configured.
+
+==============================================================
+
+Overall structure:
+working area ---> staging area ---> local repo(local commit) ---> remote repo(pushed)
+
+git fetch and pull : Used after you already cloned the repository to update your local copy.
+
+git fetch : brings the code to local repo only.
+git pull : brings the code to working area.
+git pull = git fetch + git merge
+git pull origin main //changes will be merged to main branch
 
 
